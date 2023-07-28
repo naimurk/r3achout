@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import Main from './Layout/Main/Main.jsx';
+
 import DashBoard from './Component/Dashboard/DashBoard.jsx';
 import Defaultpage from './Component/Dashboard/Default-page/Defaultpage.jsx';
+import MyJob from './Component/Dashboard/MyJob/MyJob.jsx';
+import DashboardTwo from './Component/Dashboard/DashboardTwo/DashboardTwo';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,20 @@ const router = createBrowserRouter([
         element: <Defaultpage></Defaultpage>,
         loader: ()=> fetch("cart.json")
 
-      }
+      },
+      {
+        path: '/jobs',
+        element: <MyJob></MyJob>,
+        
+
+      },
+      {
+        path: '/dashboard',
+        element: <DashboardTwo></DashboardTwo>,
+        
+
+      },
+      
     ]
   },
 ]);

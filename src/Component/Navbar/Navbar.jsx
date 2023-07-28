@@ -25,7 +25,8 @@ const Navbar = () => {
             <div className="flex w-1/2  items-center gap-x-2 lg:gap-x-10 ">
                 <div className='border p-3 lg:hidden rounded-full border-green-500'><BiSolidUser className='text-[#0C579B]'></BiSolidUser></div>
                 <p className="font-bold lg:text-xl hidden lg:block text-[#0C579B]">R<span className="text-green-500">3</span>ACHOUT. <span className="font-light text-green-500">ai</span></p>
-                <button className="hidden btn btn-md bg-white border lg:block"><AiOutlineLeft></AiOutlineLeft></button>
+               <NavLink to={"/"}>                <button className="hidden btn btn-md bg-white border lg:block"><AiOutlineLeft></AiOutlineLeft></button>
+</NavLink>
                 <p className='font-bold text-sm lg:text-lg'>Home</p>
             </div>
 
@@ -57,8 +58,8 @@ const Navbar = () => {
             <ul id="navlink" className={`md:hidden absolute md:static duration-500 ${isOpen?  "-left-3 w-3/4 pl-3 top-20 h-full translate-x-3   bg-white z-50": "-left-44 -translate-x-9 "}`}>
                     {/* Sidebar content here */}
                     <button className="btn  mb-12 mt-5 bg-green-500 text-white border-0 rounded-full">Create new job +</button>
-                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <CgWorkAlt className="text-green-500 text-xl"></CgWorkAlt> My jobs</NavLink></li>
-                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <BiSolidDashboard className="text-green-500 text-xl"></BiSolidDashboard> DashBoard</NavLink></li>
+                    <li className="my-5"><NavLink to={"/jobs"} className={"flex gap-x-2"}> <CgWorkAlt className="text-green-500 text-xl"></CgWorkAlt> My jobs</NavLink></li>
+                    <li className="my-5"><NavLink to={"/dashboard"} className={"flex gap-x-2"}> <BiSolidDashboard className="text-green-500 text-xl"></BiSolidDashboard> DashBoard</NavLink></li>
                     <li className="my-5"><NavLink className={"flex gap-x-2"}> <BiUserCircle className="text-green-500 text-xl"></BiUserCircle> Candidate R3achout</NavLink></li>
                     <li className="my-5"><NavLink className={"flex gap-x-2"}> <AiOutlineAim className="text-green-500 text-xl"></AiOutlineAim> Search Assistant</NavLink></li>
                     <li className="my-5"><NavLink className={"flex gap-x-2"}> <PiWechatLogoBold className="text-green-500 text-xl"></PiWechatLogoBold> Interview</NavLink></li>

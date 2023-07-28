@@ -21,7 +21,7 @@ const DashBoard = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content  bg-[#E7EEF5]  flex flex-col items-center justify-center ">
                 {/* Page content here */}
-                <div className="mt-20 lg:mt-12"><Outlet></Outlet></div>
+                <div className="mt-20 w-full lg:px-12 px-3 lg:mt-8"><Outlet></Outlet></div>
                 {/* <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
 
             </div>
@@ -30,8 +30,8 @@ const DashBoard = () => {
                 <ul id="navlink" className="menu p-4 relative w-80 h-full bg-white text-base-content">
                     {/* Sidebar content here */}
                     <button className="btn mb-12 bg-green-500 text-white border-0 rounded-full">Create new job +</button>
-                    <li className="my-2"><NavLink> <CgWorkAlt className="text-green-500 text-xl"></CgWorkAlt> My jobs</NavLink></li>
-                    <li className="my-2"><NavLink> <BiSolidDashboard className="text-green-500 text-xl"></BiSolidDashboard> DashBoard</NavLink></li>
+                    <li className="my-2"><NavLink to={"/jobs"}> <CgWorkAlt className="text-green-500 text-xl"></CgWorkAlt> My jobs</NavLink></li>
+                    <li className="my-2"><NavLink to={"/dashboard"}> <BiSolidDashboard className="text-green-500 text-xl"></BiSolidDashboard> DashBoard</NavLink></li>
                     <li className="my-2"><NavLink> <BiUserCircle className="text-green-500 text-xl"></BiUserCircle> Candidate R3achout</NavLink></li>
                     <li className="my-2"><NavLink> <AiOutlineAim className="text-green-500 text-xl"></AiOutlineAim> Search Assistant</NavLink></li>
                     <li className="my-2"><NavLink> <PiWechatLogoBold className="text-green-500 text-xl"></PiWechatLogoBold> Interview</NavLink></li>

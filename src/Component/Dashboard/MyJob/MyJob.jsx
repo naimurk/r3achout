@@ -1,34 +1,16 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import Cart from "./Cart";
-import { AiOutlineDown } from 'react-icons/ai';
-import Table from "./Table/Table";
+import MyjobTr from "./MyjobTr";
 
 
-
-
-const Defaultpage = () => {
-
-   const [tableData , setTableData] = useState([])
-   
-   useEffect(()=> {
-    fetch("table.json")
-    .then(res=> res.json())
-    .then(data => setTableData(data.slice(0,6)))
-   },[])
-//    console.log(tableData);
+const MyJob = () => {
+    const [data , setData]=useState([])
+    useEffect(()=> {
+        fetch('table.json')
+        .then(res=> res.json())
+        .then(data=> setData(data))
+    },[])
     return (
-        <div>
-            {/* cart div */}
-            
-                <div className="">
-                    <Cart></Cart>
-                </div>
-            
-
-            {/* table div */}
-            
-                <div className="overflow-x-auto mt-12 lg:mt-16">
+        <div className="overflow-x-auto w-full mt-5 lg:mt-16">
                     <table className="table w-full">
                         {/* head */}
                         <thead className="text-sm bg-base-300 py-12 font-bold">
@@ -45,21 +27,19 @@ const Defaultpage = () => {
                         <tbody>
                             {/* row 1 */}
                             {
-                               tableData.map((item, index)=> <Table
+                               data.map((item, index)=> <MyjobTr
                                item={item}
                                index= {index}
                                key={item?.id}
                                >
 
-                               </Table>)
+                               </MyjobTr>)
                             }
 
                         </tbody>
                     </table>
                 </div>
-            
-        </div>
     );
 };
 
-export default Defaultpage;
+export default MyJob;

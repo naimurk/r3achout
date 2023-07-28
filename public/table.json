@@ -46,5 +46,117 @@
     "stage": "Initial",
     "hiringManager": "Chris Brown",
     "priority": "Low"
+  },
+  {
+    "id": 1098,
+    "jobTitle": "Full Stack Developer",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "Emily White",
+    "priority": "High"
+  },
+  {
+    "id": 8792,
+    "jobTitle": "Marketing Specialist",
+    "status": "Open",
+    "stage": "Screening",
+    "hiringManager": "Michael Adams",
+    "priority": "Medium"
+  },
+  {
+    "id": 2415,
+    "jobTitle": "Sales Manager",
+    "status": "Open",
+    "stage": "Interview",
+    "hiringManager": "Sophia Scott",
+    "priority": "Medium"
+  },
+  {
+    "id": 6750,
+    "jobTitle": "Data Engineer",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "Daniel Wilson",
+    "priority": "High"
+  },
+  {
+    "id": 2112,
+    "jobTitle": "HR Coordinator",
+    "status": "Close",
+    "stage": "Final",
+    "hiringManager": "Oliver Taylor",
+    "priority": "Low"
+  },
+  {
+    "id": 5236,
+    "jobTitle": "Network Administrator",
+    "status": "Open",
+    "stage": "Interview",
+    "hiringManager": "Laura Martinez",
+    "priority": "Medium"
+  },
+  {
+    "id": 9632,
+    "jobTitle": "Content Writer",
+    "status": "Open",
+    "stage": "Screening",
+    "hiringManager": "Alex Turner",
+    "priority": "Low"
+  },
+  {
+    "id": 7711,
+    "jobTitle": "Graphic Designer",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "Ava Robinson",
+    "priority": "Medium"
+  },
+  {
+    "id": 3875,
+    "jobTitle": "Quality Assurance Analyst",
+    "status": "Close",
+    "stage": "Final",
+    "hiringManager": "Ryan Miller",
+    "priority": "Low"
+  },
+  {
+    "id": 4782,
+    "jobTitle": "Business Analyst",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "Grace Lewis",
+    "priority": "Medium"
+  },
+  {
+    "id": 6423,
+    "jobTitle": "Project Manager",
+    "status": "Close",
+    "stage": "Interview",
+    "hiringManager": "Liam Turner",
+    "priority": "High"
+  },
+  {
+    "id": 9087,
+    "jobTitle": "Software Engineer",
+    "status": "Open",
+    "stage": "Screening",
+    "hiringManager": "Zoe Johnson",
+    "priority": "Medium"
+  },
+  {
+    "id": 1203,
+    "jobTitle": "Technical Support Specialist",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "Ella Smith",
+    "priority": "Low"
+  },
+  {
+    "id": 2574,
+    "jobTitle": "UX Researcher",
+    "status": "Open",
+    "stage": "Interview",
+    "hiringManager": "James Brown",
+    "priority": "High"
   }
 ]
