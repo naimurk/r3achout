@@ -3,10 +3,22 @@ import { IoMdNotificationsOutline} from 'react-icons/io';
 import { RiChatCheckLine} from 'react-icons/ri';
 import { VscMenu} from 'react-icons/vsc';
 import { BiSolidUser} from 'react-icons/bi';
+import { BiSolidDashboard} from 'react-icons/bi';
+import { CgWorkAlt} from 'react-icons/cg';
+import { AiOutlineAim} from 'react-icons/ai';
+import { PiWechatLogoBold} from 'react-icons/pi';
+import { BiUserCircle} from 'react-icons/bi';
+import { PiHandshakeDuotone} from 'react-icons/pi';
+import { TbFileDescription} from 'react-icons/tb';
+import { RxCross2} from 'react-icons/rx';
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 // import { AiOutlineMenu} from 'react-icons/ri';
 
 
 const Navbar = () => {
+    const [isOpen , setIsOpen]= useState(false)
+    
     return (
         <div className="w-full flex justify-between  p-5 lg:p-7 bg-white">
             {/* first part */}
@@ -32,12 +44,35 @@ const Navbar = () => {
                         <p className = "font-bold">Malida Ryne</p>
                         <p className= "font-light">Recruiter</p>
                     </div>
-                    <div className='lg:hidden'>
-                          <VscMenu></VscMenu>
+                    <div className='md:hidden'>
+                          {
+                            isOpen ? <RxCross2 onClick={()=> setIsOpen(!isOpen)} ></RxCross2>: <VscMenu onClick={()=> setIsOpen(!isOpen)}></VscMenu>
+                          }
                     </div>
                 </div>
             </div>
+            
+            {/* mobile */}
+            <div>
+            <ul id="navlink" className={`md:hidden absolute md:static duration-500 ${isOpen?  "-left-3 w-3/4 pl-3 top-20 h-full translate-x-3   bg-white z-50": "-left-44 -translate-x-9 "}`}>
+                    {/* Sidebar content here */}
+                    <button className="btn  mb-12 mt-5 bg-green-500 text-white border-0 rounded-full">Create new job +</button>
+                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <CgWorkAlt className="text-green-500 text-xl"></CgWorkAlt> My jobs</NavLink></li>
+                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <BiSolidDashboard className="text-green-500 text-xl"></BiSolidDashboard> DashBoard</NavLink></li>
+                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <BiUserCircle className="text-green-500 text-xl"></BiUserCircle> Candidate R3achout</NavLink></li>
+                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <AiOutlineAim className="text-green-500 text-xl"></AiOutlineAim> Search Assistant</NavLink></li>
+                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <PiWechatLogoBold className="text-green-500 text-xl"></PiWechatLogoBold> Interview</NavLink></li>
+                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <PiHandshakeDuotone className="text-green-500 text-xl"></PiHandshakeDuotone> Intake</NavLink></li>
+                    <li className="my-5"><NavLink className={"flex gap-x-2"}> <TbFileDescription className="text-green-500 text-xl"></TbFileDescription> Job description</NavLink></li>
 
+                    <div className="bg-[#0C579B] absolute text-white rounded-lg bottom-8 lg:bottom-32 left-2 right-2 p-5 text-center">
+                        <p>Upgrade Your Account</p>
+                        <p className="my-4">Increase your usage and get early access to new features</p>
+                        <button className="btn bg-green-500 border-0 rounded-full text-white">upgrade</button>
+                    </div>
+                    
+                </ul>
+            </div>
 
         </div>
     );
