@@ -8,13 +8,19 @@ import {
 import './index.css'
 import Main from './Layout/Main/Main.jsx';
 import DashBoard from './Component/Dashboard/DashBoard.jsx';
+import Defaultpage from './Component/Dashboard/Default-page/Defaultpage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <DashBoard></DashBoard>,
     children: [
-      
+      {
+        path: '/',
+        element: <Defaultpage></Defaultpage>,
+        loader: ()=> fetch("cart.json")
+
+      }
     ]
   },
 ]);

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 4532,
+    "jobTitle": "Frontend Developer",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "John Doe",
+    "priority": "High"
+  },
+  {
+    "id": 4038,
+    "jobTitle": "UI/UX Designer",
+    "status": "Open",
+    "stage": "Interview",
+    "hiringManager": "Jane Smith",
+    "priority": "High"
+  },
+  {
+    "id": 4582,
+    "jobTitle": "Backend Developer",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "Mike Johnson",
+    "priority": "Low"
+  },
+  {
+    "id": 7532,
+    "jobTitle": "Data Scientist",
+    "status": "Close",
+    "stage": "Interview",
+    "hiringManager": "Sarah Williams",
+    "priority": "Low"
+  },
+  {
+    "id": 6532,
+    "jobTitle": "Product Manager",
+    "status": "Close",
+    "stage": "Final",
+    "hiringManager": "David Lee",
+    "priority": "High"
+  },
+  {
+    "id": 4032,
+    "jobTitle": "DevOps Engineer",
+    "status": "Open",
+    "stage": "Initial",
+    "hiringManager": "Chris Brown",
+    "priority": "Low"
+  }
+]
