@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { PieChart, Pie, Cell,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const DashboardS2 = () => {
   const dataTwo = [
@@ -96,62 +96,69 @@ const DashboardS2 = () => {
       "total": 12
     }
   ];
-  
-  
-  
+
+
+
 
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-center'>
-      
-      {/* tiny bar chart */}
-      <div>
-      <ResponsiveContainer width="100%" height={300}>
-        <PieChart>
-          <Pie
-            data={dataTwo}
-            cx="50%"
-            cy="50%"
-            outerRadius={80}
-            fill="#8884d8"
-            label={({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-              const RADIAN = Math.PI / 180;
-              const radius = 25 + innerRadius + (outerRadius - innerRadius);
-              const x = cx + radius * Math.cos(-midAngle * RADIAN);
-              const y = cy + radius * Math.sin(-midAngle * RADIAN);
+    <div className='grid lg:gap-x-11 mt-12 grid-cols-1 lg:grid-cols-2 items-center justify-center'>
 
-              return (
-                <text
-                  x={x}
-                  y={y}
-                  fill={COLORS[index % COLORS.length]}
-                  textAnchor={x > cx ? 'start' : 'end'}
-                  dominantBaseline="central"
-                >
-                  {`${colorIndications[index]} ${(percent * 100).toFixed(0)}%`}
-                </text>
-              );
-            }}
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
-    </div>
+      {/* tiny bar chart */}
+
+      <div>
+        <h1 className='text-xl pb-3 font-bold'>job Ration </h1>
+        <div className='bg-white'>
+          <ResponsiveContainer width="100%" height={300}>
+            <PieChart>
+              <Pie
+                data={dataTwo}
+                cx="50%"
+                cy="50%"
+                outerRadius={80}
+                fill="#8884d8"
+                label={({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+                  const RADIAN = Math.PI / 180;
+                  const radius = 25 + innerRadius + (outerRadius - innerRadius);
+                  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+                  return (
+                    <text
+                      x={x}
+                      y={y}
+                      fill={COLORS[index % COLORS.length]}
+                      textAnchor={x > cx ? 'start' : 'end'}
+                      dominantBaseline="central"
+                    >
+                      {`${colorIndications[index]} ${(percent * 100).toFixed(0)}%`}
+                    </text>
+                  );
+                }}
+              >
+                {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
       {/* pie chart */}
-     
-    <div>
-      <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="jobTitle" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="total" fill="#8884d8" />
-        </BarChart>
-      </ResponsiveContainer>
+
+      <div>
+        <h1 className='text-xl mt-5 pb-3 font-bold'>job title </h1>
+        <div className='bg-white'>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={data}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="jobTitle" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="total" fill="#8884d8" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
 
 
