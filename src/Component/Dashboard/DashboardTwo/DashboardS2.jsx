@@ -101,7 +101,7 @@ const DashboardS2 = () => {
 
 
   return (
-    <div className='grid lg:gap-x-11 mt-12 grid-cols-1 lg:grid-cols-2 items-center justify-center'>
+    <div data-aos="fade-up" className='grid lg:gap-x-11 mt-12 grid-cols-1 lg:grid-cols-2 items-center justify-center'>
 
       {/* tiny bar chart */}
 

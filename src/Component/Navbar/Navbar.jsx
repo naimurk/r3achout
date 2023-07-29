@@ -11,23 +11,37 @@ import { BiUserCircle} from 'react-icons/bi';
 import { PiHandshakeDuotone} from 'react-icons/pi';
 import { TbFileDescription} from 'react-icons/tb';
 import { RxCross2} from 'react-icons/rx';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 // import { AiOutlineMenu} from 'react-icons/ri';
 
 
 const Navbar = () => {
     const [isOpen , setIsOpen]= useState(false)
+    const location = useLocation()
+    const Pathname = location?.pathname;
+    let name = "Home" ;
+   
+    if(Pathname == "/"){
+        name="Home"
+    }
+    else if (Pathname == "/jobs"){
+        name =  "Job"
+    }
+    else if (Pathname == "/dashboard"){
+        name =  "Dashboard"
+    }
+    
     
     return (
         <div className="w-full flex justify-between  p-5 lg:p-7 bg-white">
             {/* first part */}
             <div className="flex w-1/2  items-center gap-x-2 lg:gap-x-10 ">
-                <div className='border p-3 lg:hidden rounded-full border-green-500'><BiSolidUser className='text-[#0C579B]'></BiSolidUser></div>
+                <div className='border p-3 lg:hidden rounded-full border-green-500'><Link to={'/'}><BiSolidUser className='text-[#0C579B]'></BiSolidUser></Link></div>
                 <p className="font-bold lg:text-xl hidden lg:block text-[#0C579B]">R<span className="text-green-500">3</span>ACHOUT. <span className="font-light text-green-500">ai</span></p>
                <NavLink to={"/"}>                <button className="hidden btn btn-md bg-white border lg:block"><AiOutlineLeft></AiOutlineLeft></button>
 </NavLink>
-                <p className='font-bold text-sm lg:text-lg'>Home</p>
+                <p className='font-bold text-sm lg:text-lg'>{name}</p>
             </div>
 
             {/* second part */}

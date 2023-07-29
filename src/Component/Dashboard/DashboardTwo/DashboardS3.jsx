@@ -2,7 +2,7 @@
 
 const DashboardS3 = () => {
     return (
-        <div className="mt-5 pb-12" >
+        <div data-aos="fade-up" className="mt-5  pb-12" >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-4">
                 {/* progress bar start */}
                 <div className="p-5 flex justify-center items-center bg-white">
