@@ -7,6 +7,7 @@
     background-color: white;
     color: black;
 }
-#navlink a:active {
-    background-color: white;
+#navlink a:focus  {
+    background-color: #E7EEF5;
+    color: black;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { GoDotFill} from 'react-icons/go';
+import { AiTwotoneDelete} from 'react-icons/ai';
+import { AiFillEye,AiOutlineEdit} from 'react-icons/ai';
 
 const Table = ({item,index}) => {
     const {jobTitle,status,stage,hiringManager,priority} = item
@@ -12,7 +14,11 @@ const Table = ({item,index}) => {
             <td>{hiringManager}</td>
             <td>{stage}</td> 
             <td>{priority}</td> 
-            <td>Action</td> 
+            <td className='flex gap-x-2'>
+                <AiOutlineEdit className='text-blue-500 text-xl'></AiOutlineEdit>
+                <AiFillEye className='text-green-500 text-xl' ></AiFillEye>
+                <AiTwotoneDelete className='text-red-500 text-xl'></AiTwotoneDelete>
+                </td> 
         </tr>
     );
 };
